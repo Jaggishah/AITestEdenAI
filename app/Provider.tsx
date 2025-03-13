@@ -14,7 +14,6 @@ export function Provider({
     const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
   return <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT ?? ""}>
         <ThemeProvider
-             
             attribute="class"
             defaultTheme="light"
             enableSystem
