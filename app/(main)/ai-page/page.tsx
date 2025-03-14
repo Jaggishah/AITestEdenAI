@@ -12,7 +12,7 @@ import { api } from '@/convex/_generated/api'
 import { Loader2Icon } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
-interface Coach {
+export interface Coach {
   id: number;
   name: string;
   title: string;

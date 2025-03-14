@@ -8,6 +8,7 @@ import { query } from "@/convex/_generated/server";
 import { useConvex } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { AuthContext } from "@/context/AuthContext";
+import { AssitantContext } from "@/context/AssitantContext"
 
 
 export function Provider({
@@ -15,6 +16,7 @@ export function Provider({
 }: Readonly<{
   children: React.ReactNode;}>) {
     const { user, setUser} = React.useContext(AuthContext)
+    const [ assitant, setAssitant ] = React.useState<number | null >(null);
     const router = useRouter()
     const convex = useConvex()
     React.useEffect(() => {
@@ -45,8 +47,10 @@ export function Provider({
         }
     }
   return <div>
-    <Header/>
-        {children}
+    <AssitantContext.Provider value={{assitant,setAssitant}}>
+          <Header/>
+              {children}
+        </AssitantContext.Provider>
   </div>
  
 }
