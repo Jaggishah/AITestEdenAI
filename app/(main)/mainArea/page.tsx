@@ -1,5 +1,6 @@
 import React from 'react'
 import {AssitantList} from './_components/AssitantList'
+import ModelComponent from './_components/ModelComponent'
 
 function page() {
   return (
@@ -12,7 +13,7 @@ function page() {
             main
         </div>
         <div className='hidden lg:block'>
-             model
+             <ModelComponent/>
         </div>
 
       </div>

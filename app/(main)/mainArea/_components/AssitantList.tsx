@@ -19,7 +19,7 @@ export const AssitantList = () => {
 
       useEffect(() => {
         user && checkAllAssitant()
-      },[user])
+      },[user && assitant == null ])
     
       const checkAllAssitant = async () => {
         const resutlt = await convex.query(api.aiuserAssitant.getUserAssitant,{
