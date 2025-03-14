@@ -8,5 +8,15 @@ export default defineSchema({
         picture: v.string(),
         credits: v.number(),
         orderId: v.optional(v.string()),
+    }),
+    usersAssistant:defineTable({
+        id: v.number(),
+        name: v.string(),
+        title: v.string(),
+        image: v.string(),
+        instruction: v.string(),
+        userInstruction: v.string(),
+        sampleQuestions: v.array(v.string()),
+        uid: v.id('users')
     })
 })
