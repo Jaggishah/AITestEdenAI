@@ -1,6 +1,7 @@
 import React from 'react'
 import {AssitantList} from './_components/AssitantList'
 import ModelComponent from './_components/ModelComponent'
+import ChatUi from './_components/ChatUi'
 
 function page() {
   return (
@@ -10,7 +11,7 @@ function page() {
             <AssitantList/>
         </div>
         <div className='md:col-span-4 lg:col-span-3'>
-            main
+            <ChatUi/>
         </div>
         <div className='hidden lg:block'>
              <ModelComponent/>
